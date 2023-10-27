@@ -29,14 +29,15 @@
                     <li class="header__heading_menu-item" data-link="quotes">quotes</li>
                 </ul>
                 <div class="header__heading_icons">
-                    <label>
-                        <select name='options'>
-                            <option value='option-1'>eng</option>
-                            <option value='option-2'>rus</option>
-                            <option value='option-3'>fra</option>
-                            <option value='option-4'>deu</option>
-                        </select>
-                    </label>
+                    <div class="header_select">
+                        <p class="select_current">end</p>
+                        <div class="select_option-container">
+                            <p class="option_item" onclick="changeLanguage()">eng</p>
+                            <p class="option_item" onclick="changeLanguage()">rus</p>
+                            <p class="option_item" onclick="changeLanguage()">fra</p>
+                            <p class="option_item" onclick="changeLanguage()">deu</p>
+                        </div>
+                    </div>
 
                     <img src="./assets/img/xbox.svg" alt="xbox" class="header__heading_icons-img">
                     <img src="./assets/img/steam.svg" alt="steam" class="header__heading_icons-img">
@@ -45,22 +46,25 @@
             <div class="header__heading header__heading-small">
                 <img src="./assets/img/logo.svg" alt="logo">
                 <div class="header__heading_icons">
-                    <label>
-                        <select name='options'>
-                            <option value='option-1'>eng</option>
-                            <option value='option-2'>rus</option>
-                            <option value='option-3'>fra</option>
-                            <option value='option-4'>deu</option>
-                        </select>
-                    </label>
-                    <svg id="svgButton" width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect id="svgReact" x="8.94385" y="15.2192" width="14.585" height="2.5" rx="1.25" fill="white" />
+                    <div class="header_select">
+                        <p class="select_current">end</p>
+                        <div class="select_option-container">
+                            <p class="option_item" onclick="changeLanguage()">eng</p>
+                            <p class="option_item" onclick="changeLanguage()">rus</p>
+                            <p class="option_item" onclick="changeLanguage()">fra</p>
+                            <p class="option_item" onclick="changeLanguage()">deu</p>
+                        </div>
+                    </div>
+                    <svg id="svgButton" onclick="openBurger()" width="24" height="18" viewBox="0 0 24 18" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect id="svgReact" x="8.94385" y="15.2192" width="14.585" height="2.5" rx="1.25"
+                            fill="white" />
                         <rect x="0.0415039" y="7.71924" width="23.4873" height="2.5" rx="1.25" fill="white" />
                         <rect x="0.0415039" y="0.219238" width="23.4873" height="2.5" rx="1.25" fill="white" />
                     </svg>
                 </div>
             </div>
-            
+
             <div class="header__text">
                 <h1 class="header__text-title">SURVIVE AT ALL COSTS</h1>
                 <h3 class="header__text-slogan">Experience new social battle royale game</h3>
@@ -388,4 +392,3 @@
 </body>
 
 </html>
-
