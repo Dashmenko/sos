@@ -55,6 +55,18 @@ for (let i = 0; i < linksHeader.length; i++) {
     }
 }
 
+
+let linksModal = document.querySelectorAll(".modal__heading_menu > li");
+
+for (let i = 0; i < linksModal.length; i++) {
+    linksModal[i].onclick = function () {
+        if (isburgerOpen) {
+            openBurger();
+        }
+        document.getElementById(linksModal[i].getAttribute("data-link")).scrollIntoView({ behavior: "smooth" });
+    }
+}
+
 let linksFooter = document.querySelectorAll(".footer__heading_menu > li");
 for (let i = 0; i < linksFooter.length; i++) {
     linksFooter[i].onclick = function () {
@@ -62,13 +74,14 @@ for (let i = 0; i < linksFooter.length; i++) {
     }
 }
 
+
 //burger 
 const burgerButton = document.getElementById('svgButton');
 const svgReact = document.getElementById('svgReact');
 const burgerModal = document.querySelector('.modal');
 let isburgerOpen = false;
 
-burgerButton.addEventListener("click", function (e) {
+function openBurger() {
     if (!isburgerOpen) {
         svgReact.setAttribute("x", "0");
         svgReact.setAttribute("width", "23.4873");
@@ -81,4 +94,13 @@ burgerButton.addEventListener("click", function (e) {
         document.body.style.overflow = "auto";
     }
     isburgerOpen = !isburgerOpen;
-});
+}
+
+
+const selectHeader = document.querySelectorAll('.select_current')[0];
+const selectHeaderSmall = document.querySelectorAll('.select_current')[1];
+
+function changeLanguage() {
+    selectHeader.innerHTML = event.currentTarget.innerHTML;
+    selectHeaderSmall.innerHTML = event.currentTarget.innerHTML;
+}

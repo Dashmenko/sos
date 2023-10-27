@@ -61,6 +61,39 @@ ul {
     background-color: #512da8;
   }
 }
+/*custom select*/
+.header_select {
+  height: 38px;
+  transition: all 0.15s ease;
+}
+.header_select .select_current {
+  padding: 10px 9px;
+  font-size: 12px;
+  color: #FFF;
+  font-family: "OpenSansBold";
+  text-transform: uppercase;
+  position: relative;
+}
+.header_select .select_option-container {
+  opacity: 0;
+  background: #000;
+  position: absolute;
+  padding: 10px 9px;
+}
+.header_select .select_option-container .option_item {
+  letter-spacing: 1.2px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "OpenSansBold";
+}
+.header_select .select_option-container .option_item:hover {
+  cursor: pointer;
+  color: #bd8735;
+}
+.header_select:hover .select_option-container {
+  opacity: 1;
+}
+
 .header {
   width: 100%;
   height: 960px;
@@ -106,33 +139,6 @@ ul {
   gap: 10px;
   align-items: center;
   justify-content: center;
-}
-.header .container .header__heading .header__heading_icons label {
-  position: relative;
-  display: inline-block;
-}
-.header .container .header__heading .header__heading_icons label select {
-  position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: content-box;
-  border: none;
-  outline: none;
-  font-size: 14px;
-  padding: 10px 9px;
-  margin: 0;
-  border-radius: 3px;
-  cursor: pointer;
-  height: 38px;
-  color: #FFF;
-  font-family: "OpenSansBold";
-  font-size: 12px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-}
-.header .container .header__heading .header__heading_icons label select option {
-  background: #000;
 }
 .header .container .header__heading-small {
   display: none;
@@ -365,12 +371,6 @@ ul {
   font-size: 14px;
   opacity: 0.5;
 }
-.main .main__newsletter-bg .container .main__newsletter .main__newsletter_info .main__newsletter-form .main__newsletter-form-area .main__newsletter-form_input::-moz-placeholder {
-  color: #FFB548;
-}
-.main .main__newsletter-bg .container .main__newsletter .main__newsletter_info .main__newsletter-form .main__newsletter-form-area .main__newsletter-form_input:-ms-input-placeholder {
-  color: #FFB548;
-}
 .main .main__newsletter-bg .container .main__newsletter .main__newsletter_info .main__newsletter-form .main__newsletter-form-area .main__newsletter-form_input::placeholder {
   color: #FFB548;
 }
@@ -510,8 +510,7 @@ ul {
   font-family: "OpenSansBold";
 }
 .main .wrapper .container .main__about .main__about-column .main__about_paragraph .main__about_paragraph-text .main__about_paragrapg-keyword_underline {
-  -webkit-text-decoration: underline 6px solid #FFB548;
-          text-decoration: underline 6px solid #FFB548;
+  text-decoration: underline 6px solid #FFB548;
 }
 @media (max-width: 1040px) {
   .main .wrapper .container .main__about .main__about-column .main__about_paragraph .main__about_paragraph-text {
@@ -543,12 +542,14 @@ ul {
   .main .wrapper .container .main__about {
     flex-direction: column;
     gap: 40px;
+    padding-top: 130px;
   }
   .main .wrapper .container .main__about .main__about-column {
     width: 100%;
   }
   .main .wrapper .container .main__about .main__about-column .main__about_text {
-    width: 50%;
+    width: 70%;
+    margin-top: 0;
   }
   .main .wrapper .container .main__about .main__about-column .main__about_paragraph {
     margin: 60px auto 0;
@@ -792,6 +793,7 @@ ul {
   font-family: "OpenSansBold";
   font-size: 16px;
   text-transform: capitalize;
+  border: none;
 }
 @media (max-width: 600px) {
   .main .wrapper .container .main__quotes .main__quotes-text_column .main__quotes-button {
@@ -831,8 +833,7 @@ ul {
   margin-bottom: 20px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  -moz-column-gap: 15px;
-       column-gap: 15px;
+  column-gap: 15px;
 }
 .main .wrapper .container .main__quotes .main__quotes-quote_items .main__quotes-quote_item .main__quotes-quote_item-header .main__quotes-quote_item-header_imgs-photo {
   width: 4rem;

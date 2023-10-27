@@ -64,6 +64,45 @@ ul {
     }
 }
 
+/*custom select*/
+.header_select {
+    height: 38px;
+    transition: all 0.15s ease;
+    .select_current {
+        padding: 10px 9px;
+        font-size: 12px;
+        color: #FFF;
+        font-family: "OpenSansBold";
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    .select_option-container {
+        opacity: 0;
+        background: #000;
+        position: absolute;
+        padding: 10px 9px;
+
+        .option_item {
+            letter-spacing: 1.2px;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: "OpenSansBold";
+
+            &:hover {
+                cursor: pointer;
+                color: #bd8735;
+            }
+        }
+    }
+
+    &:hover {
+        .select_option-container {
+            opacity: 1;
+        }
+    }
+}
+
 .header {
     width: 100%;
     height: 960px;
@@ -116,41 +155,6 @@ ul {
                 gap: 10px;
                 align-items: center;
                 justify-content: center;
-
-
-                label {
-                    position: relative;
-                    display: inline-block;
-
-                    select {
-                        position: relative;
-                        -webkit-appearance: none;
-                        -moz-appearance: none;
-                        appearance: none;
-                        background: content-box;
-                        border: none;
-                        outline: none;
-                        font-size: 14px;
-                        padding: 10px 9px;
-                        margin: 0;
-                        -webkit-border-radius: 3px;
-                        -moz-border-radius: 3px;
-                        border-radius: 3px;
-                        cursor: pointer;
-                        height: 38px;
-
-                        color: #FFF;
-                        font-family: "OpenSansBold";
-                        font-size: 12px;
-                        letter-spacing: 1.2px;
-                        text-transform: uppercase;
-
-                        option {
-                            background: #000;
-                        }
-                    }
-
-                }
             }
         }
 
@@ -405,7 +409,7 @@ ul {
                     }
 
                     .main__newsletter-form {
-                                  
+
                         width: 100%;
                         display: flex;
                         flex-direction: row;
@@ -639,12 +643,14 @@ ul {
                 .main__about {
                     flex-direction: column;
                     gap: 40px;
+                    padding-top: 130px;
 
                     .main__about-column {
                         width: 100%;
 
                         .main__about_text {
-                            width: 50%;
+                            width: 70%;
+                            margin-top: 0;
                         }
 
                         .main__about_paragraph {
@@ -933,6 +939,7 @@ ul {
                         font-family: "OpenSansBold";
                         font-size: 16px;
                         text-transform: capitalize;
+                        border: none;
                     }
 
                     @media (max-width:600px) {
@@ -1093,7 +1100,7 @@ ul {
 
         }
     }
-    
+
     .main__features-bg {
         background-position: 40%;
         background-image: radial-gradient(81.01% 53.57% at 30.85% 53.65%, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.00) 19.2%, rgba(4, 5, 6, 0.7) 47.48%, #080A0B 99.74%),
